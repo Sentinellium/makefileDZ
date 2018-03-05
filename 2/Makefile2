@@ -1,10 +1,10 @@
 all: main.o base.o gcd.o 
-	g++ -std=gnu++11 -O0 -Wall -Wextra -DCEMA main.o base.o gcd.o
+	main.o base.o gcd.o
 main.o: main.cpp functions.h
-	g++ -c -std=gnu++11 -O0 -Wall -Wextra -DCEMA main.cpp -o main.o
+	main.cpp -o main.o
 base.o: base.cpp functions.h
-	g++ -c -std=gnu++11 -O0 -Wall -Wextra -DCEMA base.cpp -o base.o
+	base.cpp -o base.o
 gcd.o: gcd.cpp functions.h
-	g++ -c -std=gnu++11 -O0 -Wall -Wextra -DCEMA gcd.cpp -o gcd.o
+	gcd.cpp -o gcd.o
 clean:
 	rm -f *.o
